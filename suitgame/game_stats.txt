@@ -1,0 +1,6 @@
+statistik game: 
+Game played on 2024-12-01- 13:36:53 - Pemain: 1, Komputer: 3 - Percobaan: 5
+Game dimainkan pada 2024-12-01- 13:39:19 - Pemain: 0, Komputer: 3 - Percobaan: 3
+Game played on 2024-12-01- 13:41:02 - Pemain: 3, Komputer: 1 - Percobaan: 6
+Game played on 2024-12-01 13:59:17 - Pemain: 3, Komputer: 1 - Percobaan: 4
+Game played on 2024-12-02 15:30:18 - Pemain: 1, Komputer: 3 - Percobaan: 13
