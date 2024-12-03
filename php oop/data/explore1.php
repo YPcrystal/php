@@ -1,12 +1,13 @@
 <?php
 
+// destructor
 class MyClass {
     function __construct() {
-        echo "Objek telah dibuat.<br>";
+        echo "Objek telah dibuat.\n";
     }
     
     function __destruct() {
-        echo "Objek telah dihancurkan.<br>";
+        echo "Objek telah dihancurkan.\n";
     }
 }
 
