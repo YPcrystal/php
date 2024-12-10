@@ -13,11 +13,11 @@ addTodoList("Belajar Laravel");
 
 showTodoList();
 
-removeTodoList();
+removeTodoList(3);
 
 showTodoList();
 
-removeTodoList();
+removeTodoList(2);
 
 showTodoList();
 
