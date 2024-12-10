@@ -4,7 +4,7 @@ class Person //nulis class huruf awalnya besar
 {
     var string $name; //ciri-ciri dari objek tersebut bagaikan pabrik untuk membuat objek
     var string $address;
-    var string $country = "indonesia"; //default value
+    var string $country; //default value
     var int $age;
 
    

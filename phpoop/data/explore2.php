@@ -4,8 +4,9 @@
 // Inheritance memungkinkan sebuah kelas (child class)
 // untuk mewarisi properti dan metode dari kelas lain (parent class).
 // Hal ini membantu dalam pengelolaan kode yang lebih terstruktur dan memudahkan pengembangan aplikasi.
+// ini bersifat automatic jd tidak perlu di copas lagi untuk membuat turunan 
 
-class ParentClass {
+class ParentClass { //properti parent
     public $name = "Parent";
 
     public function greet() {

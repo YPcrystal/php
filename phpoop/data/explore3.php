@@ -7,13 +7,13 @@
 
 class Animal {
     public function makeSound() {
-        echo "Animal sound<br>";
+        echo "Animal sound\n";
     }
 }
 
 class Dog extends Animal {
     public function makeSound() {
-        echo "Bark!<br>";
+        echo "Bark!\n";
     }
 }
 

@@ -6,13 +6,13 @@
 
 trait Logger {
     public function log($message) {
-        echo "Logging: $message<br>";
+        echo "Logging: $message\n";
     }
 }
 
 trait Notifier {
     public function notify($message) {
-        echo "Notifying: $message<br>";
+        echo "Notifying: $message\n";
     }
 }
 
