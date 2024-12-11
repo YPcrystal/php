@@ -12,3 +12,5 @@ require_once __DIR__ . "/Helper/Input.php";
 echo "Aplikasi TodoList" . PHP_EOL;
 
 viewShowTodoList();
+
+// require = mengambil file kemudian menyimpan nya di memory
