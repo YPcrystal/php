@@ -12,7 +12,7 @@ namespace Service {
         private TodolistRepository $todolistRepository;
         public function __contruct(TodolistRepository $todolistRepository) {
             $this->todolistRepository = $todolistRepository;
-        }
+        } 
         function showTodolist(): void {
             echo "TODOLIST" . PHP_EOL;
             $todolist = $this->todolistRepository->findAll();
