@@ -50,4 +50,4 @@ function testViewRemoveTodolist(): void
     $todolistView->removeTodolist();
     $todolistService->showTodolist(); 
 }
-testViewRemoveTodolist():
+testViewRemoveTodolist();
