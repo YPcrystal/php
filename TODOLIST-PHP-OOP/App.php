@@ -1,19 +1,19 @@
 <?php
 
-require_once __DIR__ . '/Entity/TodoList.php';
+require_once __DIR__ . '/Entity/Todolist.php';
 require_once __DIR__ . '/Helper/InputHelper.php';
-require_once __DIR__ . '/Repository/TodoListRepository.php';
-require_once __DIR__ . '/Service/TodoListService.php';
-require_once __DIR__ . '/View/TodoListView.php';
+require_once __DIR__ . '/Repository/TodolistRepository.php';
+require_once __DIR__ . '/Service/TodolistService.php';
+require_once __DIR__ . '/View/TodolistView.php';
 
-use Repository\TodoListRepositoryImpl;
-use Service\TodoListServiceImpl;
-use View\TodoListView;
+use Repository\TodolistRepositoryImpl;
+use Service\TodolistServiceImpl;
+use View\TodolistView;
 
-echo "Aplikasi TodoList" . PHP_EOL;
+echo "Aplikasi Todolist" . PHP_EOL;
 
-$todoListRepository = new TodoListRepositoryImpl();
-$todoListService = new TodoListServiceImpl($todoListRepository);
-$todoListView = new TodoListView($todoListService);
+$todolistRepository = new TodolistRepositoryImpl();
+$todolistService = new TodolistServiceImpl($todolistRepository);
+$todolistView = new TodolistView($todolistService);
 
-$todoListView->showTodoList();
+$todolistView->showTodolist();

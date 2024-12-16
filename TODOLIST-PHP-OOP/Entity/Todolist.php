@@ -1,13 +1,13 @@
 <?php
 
 namespace Entity {
-    class TodoList
+    class Todolist
     {
         private string $todo;
 
         public function __construct(string $todo ="")
         {
-            $this->todo =$todo;
+            $this->todo = $todo;
         }
 
         public function getTodo(): string
@@ -17,7 +17,7 @@ namespace Entity {
 
         public function setTodo(string $todo): void
         {
-            $this->todo - $todo;
+            $this->todo = $todo;
         }
     }
 }

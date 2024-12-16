@@ -7,6 +7,7 @@ namespace View {
 
     class TodolistView
     {
+        
         private TodolistService $todolistService;
 
         public function __construct(TodolistService $todolistService)

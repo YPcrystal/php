@@ -1,18 +1,18 @@
 <?php
 
 namespace Repository {
-    use Entity\TodoList;
-    interface TodoListRepository
+    use Entity\Todolist;
+    interface TodolistRepository
     {
-        function save(TodoList $todolist): void;
+        function save(Todolist $todolist): void;
         function remove(int $number): bool;
         function findAll(): array;
     }
-    class TodoListRepositoryImpl implements TodoListRepository {
+    class TodolistRepositoryImpl implements TodolistRepository {
         public array $todolist = array();
-        function save(TodoList $todolist): void
+        function save(Todolist $todolist): void
         {
-            $number = sizeof($this->todolist) +1;
+            $number = sizeof($this->todolist) + 1;
             $this->todolist[$number] = $todolist;
         }
         function remove(int $number): bool
