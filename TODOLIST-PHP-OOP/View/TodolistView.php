@@ -16,7 +16,7 @@ namespace View {
                 echo "MENU" . PHP_EOL;
                 echo "1. Tambah Todolist" . PHP_EOL;
                 echo "2. Hapus Todolist" . PHP_EOL;
-                echo "4. Keluar" . PHP_EOL;
+                echo "x. Keluar" . PHP_EOL;
 
                 $pilihan = InputHelper::input("Pilihan");
 
