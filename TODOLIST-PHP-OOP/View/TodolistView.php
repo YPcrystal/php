@@ -13,12 +13,14 @@ namespace View {
         }
         function showTodolist(): void {
             while (true) {
+                $this->todolistService->showTodolist();
+
                 echo "MENU" . PHP_EOL;
                 echo "1. Tambah Todolist" . PHP_EOL;
                 echo "2. Hapus Todolist" . PHP_EOL;
                 echo "x. Keluar" . PHP_EOL;
 
-                $pilihan = InputHelper::input("Pilihan");
+                $pilihan = InputHelper::input("Pilih");
 
                 if ($pilihan == "1") {
                     $this->addTodolist();
