@@ -1,8 +1,7 @@
 <?php
-require_once __DIR__ . "/../Entity/Todolist.php";
-require_once __DIR__ . "/../Repository/TodolistRepository.php";
-require_once __DIR__ . "/../Service/TodolistService.php";
-
+require_once _DIR_ . "/../Entity/Todolist.php";
+require_once _DIR_ . "/../Repository/TodolistRepository.php";
+require_once _DIR_ . "/../Service/TodolistService.php";
 use Entity\Todolist;
 use Service\TodolistServiceImpl;
 use Repository\TodolistRepositoryImpl;
@@ -31,6 +30,6 @@ function testRemoveTodolist(): void {
     $todolistService->removeTodolist(4);
     $todolistService->showTodolist();
 }
-testShowTodoList();
-testAddTodoList();
-testRemoveTodoList();
+testShowTodolist();
+testAddTodolist();
+testRemoveTodolist();

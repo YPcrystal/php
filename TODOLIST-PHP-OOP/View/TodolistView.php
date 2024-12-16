@@ -1,31 +1,24 @@
 <?php
 
 namespace View {
-
+    
     use Service\TodolistService;
     use Helper\InputHelper;
 
-    class TodolistView
-    {
-        
+    class TodolistView {
         private TodolistService $todolistService;
 
-        public function __construct(TodolistService $todolistService)
-        {
+        public function __construct(TodolistService $todolistService) {
             $this->todolistService = $todolistService;
         }
-
-        function showTodolist(): void
-        {
+        function showTodolist(): void {
             while (true) {
-                $this->todolistService->showTodolist();
-
                 echo "MENU" . PHP_EOL;
-                echo "1. Tambah Todo" . PHP_EOL;
-                echo "2. Hapus Todo" . PHP_EOL;
-                echo "x. Keluar" . PHP_EOL;
+                echo "1. Tambah Todolist" . PHP_EOL;
+                echo "2. Hapus Todolist" . PHP_EOL;
+                echo "4. Keluar" . PHP_EOL;
 
-                $pilihan = InputHelper::input("Pilih");
+                $pilihan = InputHelper::input("Pilihan");
 
                 if ($pilihan == "1") {
                     $this->addTodolist();
@@ -41,22 +34,20 @@ namespace View {
             echo "Sampai Jumpa Lagi" . PHP_EOL;
         }
 
-        function addTodolist(): void
-        {
-            echo "MENAMBAH TODO" . PHP_EOL;
+        function addTodolist(): void {
+            echo "MENAMBAH TODOLIST" . PHP_EOL;
 
-            $todo = InputHelper::input("Todo (x untuk batal)");
+            $todo = InputHelper::input("Todolist (x untuk batal)");
 
             if ($todo == "x") {
-                echo "Batal menambah todo" . PHP_EOL;
+                echo "Batal menambah todolist" . PHP_EOL;
             } else {
                 $this->todolistService->addTodolist($todo);
             }
         }
 
-        function removeTodolist(): void 
-        {
-            echo "MENGHAPUS FOTO" . PHP_EOL;
+        function removeTodolist(): void {
+            echo "MENGHAPUS TODOLIST" . PHP_EOL;
 
             $pilihan = InputHelper::input("Nomor (x untuk batalkan)");
 
@@ -65,8 +56,6 @@ namespace View {
             } else {
                 $this->todolistService->removeTodolist($pilihan);
             }
-        } 
-
+        }
     }
-
 }

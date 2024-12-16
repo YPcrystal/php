@@ -1,27 +1,29 @@
 <?php
 
-require_once __DIR__ . '/../Entity/Todolist.php';
-require_once __DIR__ . '/../Repository/TodolistRepository.php';
-require_once __DIR__ . '/../Service/TodolistService.php';
-require_once __DIR__ . '/../View/TodolistView.php';
-require_once __DIR__ . '/../Helper/InputHelper.php';
+require_once _DIR_ . '/../Entity/Todolist.php';
+require_once _DIR_ . '/../Repository/TodolistRepository.php';
+require_once _DIR_ . '/../Service/TodolistService.php';
+require_once _DIR_ . '/../View/TodolistView.php';
+require_once _DIR_ . '/../Helper/InputHelper.php';
 
 use \Entity\Todolist;
 use \Repository\TodolistRepositoryImpl;
 use \Service\TodolistServiceImpl;
 use \View\TodolistView;
 
-function testViewShowTodolist(): void
-{
+function testViewShowTodolist(): void {
     $todolistRepository = new TodolistRepositoryImpl();
     $todolistService = new TodolistServiceImpl($todolistRepository);
     $todolistView = new TodolistView($todolistService);
+
+    $todolistService->addTodolist("Belajar PHP");
+    $todolistService->addTodolist("Belajar PHP OOP");
+    $todolistService->addTodolist("Belajar PHP Database");
 
     $todolistView->showTodolist();
 }
 
-function testViewAddTodolist(): void
-{
+function testViewAddTodolist(): void {
     $todolistRepository = new TodolistRepositoryImpl();
     $todolistService = new TodolistServiceImpl($todolistRepository);
     $todolistView = new TodolistView($todolistService);
@@ -33,11 +35,10 @@ function testViewAddTodolist(): void
     $todolistView->addTodolist();
     $todolistService->showTodolist();
     $todolistView->addTodolist();
-    $todolistService->showTodolist(); 
+    $todolistService->showTodolist();
 }
 
-function testViewRemoveTodolist(): void
-{
+function testViewRemoveTodolist(): void {
     $todolistRepository = new TodolistRepositoryImpl();
     $todolistService = new TodolistServiceImpl($todolistRepository);
     $todolistView = new TodolistView($todolistService);
@@ -48,6 +49,6 @@ function testViewRemoveTodolist(): void
     $todolistView->removeTodolist();
     $todolistService->showTodolist();
     $todolistView->removeTodolist();
-    $todolistService->showTodolist(); 
+    $todolistService->showTodolist();
 }
 testViewRemoveTodolist();
